@@ -1,0 +1,223 @@
+:root {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #1b2437;
+    background: #f4f6fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    --muted: #727d91;
+    --accent: #5549d6;
+    --line: #e0e5ef;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.login-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 38px 20px 24px;
+    background:
+        radial-gradient(ellipse at 50% 0, rgba(91, 79, 218, .1), transparent 42%),
+        #f4f6fb;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 27px;
+    color: #20283a;
+    font-size: 19px;
+    font-weight: 720;
+    letter-spacing: -.5px;
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(145deg, #7166ef, #5045ce);
+    border-radius: 11px;
+}
+
+.brand-mark svg {
+    width: 25px;
+    height: 25px;
+}
+
+.login-card {
+    width: min(100%, 410px);
+    padding: 35px 36px 29px;
+    background: #fff;
+    border: 1px solid #e8ebf2;
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(30, 42, 75, .09);
+}
+
+.login-heading {
+    margin-bottom: 27px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.15px;
+    text-transform: uppercase;
+}
+
+.login-heading h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -.9px;
+    line-height: 1.25;
+}
+
+.login-heading > p:last-child {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.login-form {
+    display: grid;
+    gap: 19px;
+}
+
+.field-group {
+    display: grid;
+    gap: 8px;
+}
+
+.field-group label {
+    color: #30394c;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.field-group .form-control {
+    width: 100%;
+    min-height: 47px;
+    padding: 0 13px;
+    color: #1b2437;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color .16s ease, box-shadow .16s ease;
+}
+
+.field-group .form-control::placeholder {
+    color: #9aa3b3;
+}
+
+.field-group .form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(85, 73, 214, .13);
+}
+
+.submit-button {
+    min-height: 47px;
+    margin-top: 3px;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 12px rgba(85, 73, 214, .2);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 680;
+    transition: background .16s ease, transform .16s ease;
+}
+
+.submit-button:hover {
+    background: #463bbd;
+    transform: translateY(-1px);
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid rgba(85, 73, 214, .3);
+    outline-offset: 3px;
+}
+
+.form-alert,
+.field-errors {
+    color: #a52e3b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.form-alert {
+    margin: -10px 0 19px;
+    padding: 11px 12px;
+    background: #fff2f3;
+    border: 1px solid #f2cbd0;
+    border-radius: 8px;
+}
+
+.form-alert p,
+.field-errors p {
+    margin: 0;
+}
+
+.field-errors {
+    margin-top: -1px;
+}
+
+.form-note {
+    margin: 21px 0 0;
+    color: #818a9b;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.page-footer {
+    margin: 22px 0 0;
+    color: #8a93a3;
+    font-size: 11px;
+}
+
+@media (max-width: 480px) {
+    .login-page {
+        padding: 24px 16px 18px;
+    }
+
+    .brand {
+        margin-bottom: 22px;
+    }
+
+    .login-card {
+        padding: 30px 24px 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+    }
+}
